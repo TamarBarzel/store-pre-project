@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+
+header{
+    background-color:aqua;
+}
+
+main{
+    background-color:aquamarine;
+}
+
+footer{
+    background-color:palevioletred;
+}
+
+.category{
+    
+}
