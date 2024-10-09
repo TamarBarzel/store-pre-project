@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl
 }
 
 header{
@@ -16,4 +18,84 @@ footer{
 
 .category{
     
+}
+
+
+
+
+#sidebar {
+    height: 100%;
+    width: 20vw; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+}
+
+#sidebar a {
+    padding: 1rem 1.5rem; 
+    text-decoration: none;
+    font-size: 1.5rem; 
+    color: white;
+    display: block;
+    transition: 0.3s;
+    padding-right: 10%;
+    /* border-bottom: 1px solid #333; */
+}
+
+#sidebar a:hover {
+    background-color: #575757;
+}
+
+#content {
+    margin-right: 22vw; 
+    padding: 20px;
+}
+
+#sidebar a.payment {
+    background-color: gold;
+    color: black;
+    text-align: right;
+    font-weight: bold;
+    padding: 1.2rem;
+    padding-right: 10%;
+    /* margin-top: auto;  */
+    border-top: 4px solid white;
+    border-bottom: 4px solid white; 
+}
+
+#sidebar a.payment i {
+    margin-left: 0.5rem;
+}
+.devider {
+    border: 1px solid var(--border);
+    margin: 1rem 0;
+    background-color: #575757;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 30vw;
+    }
+
+    #content {
+        margin-right: 32vw;
+    }
+
+    #sidebar a {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    #sidebar a.payment {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
 }
