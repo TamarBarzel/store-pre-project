@@ -123,10 +123,6 @@ i{
     justify-content: flex-start;
     transition: transform 0.3s ease;
     
-<<<<<<< HEAD
-=======
-
->>>>>>> c4ac6c7daeca6cb7a4bf5f7cedf7dde77bf41fd9
 }
 
 #sidebar a {
@@ -160,13 +156,10 @@ i{
     border-bottom: 4px solid white;
 }
 
-<<<<<<< HEAD
 #sidebar a.payment i {
     margin-left: 0.5rem;
 }
 
-=======
->>>>>>> c4ac6c7daeca6cb7a4bf5f7cedf7dde77bf41fd9
 .devider {
     border: 1px solid var(--border);
     margin: 1rem 0;
