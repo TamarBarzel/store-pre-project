@@ -1,6 +1,7 @@
 // sidebar.js
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
+    const productsContainer = this.getElementById('products-container')
 
     const sidebarContent = `
         <a href="#stationary">כלי כתיבה</a>
@@ -11,11 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
 
     sidebar.innerHTML = sidebarContent;
-});
 
-
-// footer.js
-document.addEventListener('DOMContentLoaded', function () {
     const footerDiv = document.getElementById('footer-container');
 
     const footerContent = `
@@ -32,10 +29,37 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
 
     footerDiv.innerHTML = footerContent;
+
+
+    fetch('https://fakestoreapi.com/products')
+        .then(Response => Response.json())
+        .then(data => {
+             data.forEach(product => {
+                let productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+
+                let productImg = document.createElement('img');
+                productImg.src = product.image;
+                productCard.appendChild(productImg);
+
+                let productName = document.createElement('h3');
+                productName.textContent = product.title;
+                productCard.appendChild(productName);
+
+                let productPrice = document.createElement('p');
+                productPrice.textContent = `Price: $${product.price}`;
+                productCard.appendChild(productPrice);
+
+                productsContainer.appendChild(productCard);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        })
 });
 
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("show"); 
+    sidebar.classList.toggle("show");
 }
 
