@@ -1,75 +1,100 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>פסגות שופ - מידע</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <div class="business-details-container">
-        <section class="info-section">
-            <h3>שירות לקוחות</h3>
-            <p>כתובת: שייקה אופיר 12 ראש-העין</p>
-            <p>טלפון: 054-5779917</p>
-            <p>דוא"ל: office@psagot.shop</p>
-        </section>
-
-        <section class="info-section">
-            <h3>תנאים</h3>
-            <p>החזרת מוצרים: ניתן להחזיר מוצר באריזתו המקורית לא יאוחר מ-24 שעות מרגע קבלתו</p>
-        </section>
-
-        <section class="info-section">
-            <h3>משלוחים</h3>
-            <p>משלוחים עד 3 ימי עסקים</p>
-        </section>
-
-        <section class="info-section">
-            <h3>אודות</h3>
-            <p>פסגות שופ היא חנות און-ליין לכלי כתיבה ומוצרי נייר למשרד ולבית</p>
-            <p>כלי כתיבה בראש העין</p>
-            <p>ציוד בית ספר בראש העין</p>
-            <p>Staedtler, Stabilo, Pilot, HP, Casio</p>
-            <p>פסגות שופ ראש העין</p>
-
-            <div class="faq">
-                <h4>שאלות ותשובות</h4>
-                <dl>
-                    <dt>האם ניתן לרכוש אצלכם מתנות לחג?</dt>
-                    <dd>בוודאי. בפסגות שופ ניתן למצוא מארזי יצירה, נרות דקורטיביים ואף יצירות אומנות</dd>
-
-                    <dt>האם ניתן לרכוש אצלכם מוצרי נייר למשרד?</dt>
-                    <dd>כן. בפסגות שופ ניתן למצוא מגוון רחב של מוצרי נייר למשרד</dd>
-
-                    <dt>האם ניתן לרכוש אצלכם ציוד בית ספר?</dt>
-                    <dd>כן. בפסגות שופ ניתן למצוא מגוון רחב של ציוד בית ספר</dd>
-
-                    <dt>האם ניתן לרכוש אצלכם כלי כתיבה?</dt>
-                    <dd>כן. בפסגות שופ ניתן למצוא מגוון רחב של כלי כתיבה</dd>
-
-                    <dt>אילו מותגים ניתן למצוא אצלכם?</dt>
-                    <dd>Staedtler, Stabilo, Pilot, HP, Casio, Campus, Kangaro, קלסריקה, Leonardo, Carioca, Angelo, Primo, Panda, Fibraco, Munix ועוד</dd>
-
-                    <dt>האם ניתן לרכוש אצלכם דיו ונייר למדפסת?</dt>
-                    <dd>כן. בפסגות שופ ניתן למצוא דיו ונייר למדפסת</dd>
-
-                    <dt>האם ניתן למצוא אצלכם חומרי יצירה לגני ילדים?</dt>
-                    <dd>כן. בפסגות שופ ניתן למצוא חומרי יצירה לגני ילדים</dd>
-
-                    <dt>אילו חומרי יצירה?</dt>
-                    <dd>פלסטלינה, מערוך, קליי, טושים, צבעי עיפרון, צבעי מים, בלוק ציור, גואש, פנדה, דבק פלסטי</dd>
-                </dl>
-            </div>
-
-            <p>
-                <a target="_blank" href="https://www.google.com/maps/place/%D7%A4%D7%A1%D7%92%D7%95%D7%AA+%D7%A9%D7%95%D7%A4%E2%80%AD/@32.0848718,34.976558,17z/data=!4m6!3m5!1s0xed62f08488831a7:0x803b06b1ade1350e!8m2!3d32.0858153!4d34.9764465!16s%2Fg%2F11w290tdqx?entry=ttu&g_ep=EgoyMDI0MTAwNS4yIKXMDSoASAFQAw%3D%3D">
-                    כתובת בגוגל מפות
-                </a>
-                <br>
-            </p>
-        </section>
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
     </div>
-    
+
+    <div id="sidebar">
+        <a href="#stationary">כלי כתיבה</a>
+        <a href="#notebooks">מחברות</a>
+        <a href="#colors">צבעים ויצירה</a>
+        <div class="devider"></div>
+        <a href="payment.html" class="payment">לתשלום 🛒</a>
+    </div>
+
+    <div style="direction: ltr;">
+        <main>
+            <div class="business-details-container">
+                <section class="info-section">
+                    <h3>שירות לקוחות</h3>
+                    <p>כתובת: שייקה אופיר 12 ראש-העין</p>
+                    <p>טלפון: 054-5779917</p>
+                    <p>דוא"ל: office@psagot.shop</p>
+                </section>
+
+                <section class="info-section">
+                    <h3>תנאים</h3>
+                    <p>החזרת מוצרים: ניתן להחזיר מוצר באריזתו המקורית לא יאוחר מ-24 שעות מרגע קבלתו</p>
+                </section>
+
+                <section class="info-section">
+                    <h3>משלוחים</h3>
+                    <p>משלוחים עד 3 ימי עסקים</p>
+                </section>
+
+                <section class="info-section">
+                    <h3>אודות</h3>
+                    <p>פסגות שופ היא חנות און-ליין לכלי כתיבה ומוצרי נייר למשרד ולבית</p>
+                    <p>כלי כתיבה בראש העין</p>
+                    <p>ציוד בית ספר בראש העין</p>
+                    <p>Staedtler, Stabilo, Pilot, HP, Casio</p>
+                    <p>פסגות שופ ראש העין</p>
+
+                    <div class="faq">
+                        <h4>שאלות ותשובות</h4>
+                        <dl>
+                            <dt>האם ניתן לרכוש אצלכם מתנות לחג?</dt>
+                            <dd>בוודאי. בפסגות שופ ניתן למצוא מארזי יצירה, נרות דקורטיביים ואף יצירות אומנות</dd>
+
+                            <dt>האם ניתן לרכוש אצלכם מוצרי נייר למשרד?</dt>
+                            <dd>כן. בפסגות שופ ניתן למצוא מגוון רחב של מוצרי נייר למשרד</dd>
+
+                            <dt>האם ניתן לרכוש אצלכם ציוד בית ספר?</dt>
+                            <dd>כן. בפסגות שופ ניתן למצוא מגוון רחב של ציוד בית ספר</dd>
+
+                            <dt>האם ניתן לרכוש אצלכם כלי כתיבה?</dt>
+                            <dd>כן. בפסגות שופ ניתן למצוא מגוון רחב של כלי כתיבה</dd>
+
+                            <dt>אילו מותגים ניתן למצוא אצלכם?</dt>
+                            <dd>Staedtler, Stabilo, Pilot, HP, Casio, Campus, Kangaro, קלסריקה, Leonardo, Carioca,
+                                Angelo, Primo, Panda, Fibraco, Munix ועוד</dd>
+
+                            <dt>האם ניתן לרכוש אצלכם דיו ונייר למדפסת?</dt>
+                            <dd>כן. בפסגות שופ ניתן למצוא דיו ונייר למדפסת</dd>
+
+                            <dt>האם ניתן למצוא אצלכם חומרי יצירה לגני ילדים?</dt>
+                            <dd>כן. בפסגות שופ ניתן למצוא חומרי יצירה לגני ילדים</dd>
+
+                            <dt>אילו חומרי יצירה?</dt>
+                            <dd>פלסטלינה, מערוך, קליי, טושים, צבעי עיפרון, צבעי מים, בלוק ציור, גואש, פנדה, דבק פלסטי
+                            </dd>
+                        </dl>
+                    </div>
+                    <p>
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/%D7%A4%D7%A1%D7%92%D7%95%D7%AA+%D7%A9%D7%95%D7%A4%E2%80%AD/@32.0848718,34.976558,17z/data=!4m6!3m5!1s0xed62f08488831a7:0x803b06b1ade1350e!8m2!3d32.0858153!4d34.9764465!16s%2Fg%2F11w290tdqx?entry=ttu&g_ep=EgoyMDI0MTAwNS4yIKXMDSoASAFQAw%3D%3D">
+                            כתובת בגוגל מפות
+                        </a>
+                    </p>
+                    <br>
+                    <br>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-container"> </div>
+    <script src='../JS/scripts.js'>  </script>
 </body>
+
 </html>

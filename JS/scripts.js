@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="#notebooks">מחברות</a>
         <a href="#colors">צבעים ויצירה</a>
         <div class="devider"></div>
-        <a href="payment.html" class="payment"> לתשלום 🛒</a>
+        <a href="../HTML/payment-form.html" class="payment"> לתשלום 🛒</a>
     `;
 
     sidebar.innerHTML = sidebarContent;
