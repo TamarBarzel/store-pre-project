@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
 
-    
     const sidebarContent = `
         <a href="#stationary">כלי כתיבה</a>
         <a href="#notebooks">מחברות</a>
@@ -13,3 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sidebar.innerHTML = sidebarContent;
 });
+
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("show"); 
+}
+

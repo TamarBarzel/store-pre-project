@@ -5,31 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
 
     <div class="page-container">
-        <div>
-            <header>
-                <div class="category"></div>
-            </header>
-        </div>
-        
-            <div id="sidebar"></div> 
-            <div id="content">
-            <!-- <menu></menu> -->
-        </div>
-        <div>
-            <main>main</main>
-        </div>
-        <div>
-            <footer>footer</footer>
+        <header>
+            <div class="category"></div>
+        </header>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
         </div>
 
+        <div id="sidebar">
+            <a href="#stationary">כלי כתיבה</a>
+            <a href="#notebooks">מחברות</a>
+            <a href="#colors">צבעים ויצירה</a>
+            <div class="devider"></div>
+            <a href="payment.html" class="payment">לתשלום 🛒</a>
+        </div>
+
+        <div id="content">
+            
+        </div>
+        
+        <main>main</main>
+        
+        <footer>footer</footer>
     </div>
-    <script src='../JS/scripts.js'>  </script>
+
+    <script src='../JS/scripts.js'></script>
 </body>
 
 </html>

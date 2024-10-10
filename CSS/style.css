@@ -1,31 +1,39 @@
-body{
+body {
     margin: 0;
     font-family: Arial, sans-serif;
-    direction: rtl
+    direction: rtl;
 }
 
-header{
-    background-color:aqua;
+header {
+    background-color: aqua;
 }
 
-main{
-    background-color:aquamarine;
+main {
+    background-color: aquamarine;
 }
 
-footer{
-    background-color:palevioletred;
+footer {
+    background-color: palevioletred;
 }
 
-.category{
-    
+.category {}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    top: 7px;
+    right: 7px;
+    z-index: 100;
+    background-color: #111;
+    padding: 10px;
 }
-
-
-
 
 #sidebar {
     height: 100%;
-    width: 20vw; 
+    width: 18%;
     position: fixed;
     top: 0;
     right: 0;
@@ -35,19 +43,20 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    transition: transform 0.3s ease;
     
-    
+
 }
 
 #sidebar a {
-    padding: 1rem 1.5rem; 
+    margin-top: 3px;
+    padding: 1rem 1.5rem;
     text-decoration: none;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     color: white;
     display: block;
     transition: 0.3s;
     padding-right: 10%;
-    /* border-bottom: 1px solid #333; */
 }
 
 #sidebar a:hover {
@@ -55,7 +64,7 @@ footer{
 }
 
 #content {
-    margin-right: 22vw; 
+    margin-right: 22vw;
     padding: 20px;
 }
 
@@ -66,14 +75,10 @@ footer{
     font-weight: bold;
     padding: 1.2rem;
     padding-right: 10%;
-    /* margin-top: auto;  */
     border-top: 4px solid white;
-    border-bottom: 4px solid white; 
+    border-bottom: 4px solid white;
 }
 
-#sidebar a.payment i {
-    margin-left: 0.5rem;
-}
 .devider {
     border: 1px solid var(--border);
     margin: 1rem 0;
@@ -82,20 +87,22 @@ footer{
 
 @media (max-width: 768px) {
     #sidebar {
-        width: 30vw;
+        width: 30%;
+        transform: translateX(100%);
     }
 
     #content {
-        margin-right: 32vw;
+        margin-right: 0; 
     }
 
-    #sidebar a {
-        font-size: 1.2rem;
-        padding: 1rem;
+    .hamburger {
+        display: block;
     }
 
-    #sidebar a.payment {
-        font-size: 1.2rem;
-        padding: 1rem;
+    #sidebar.show {
+        transform: translateX(0);
+    }
+    #sidebar a{
+        margin-top: 22%;
     }
 }
