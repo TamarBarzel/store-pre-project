@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebar.innerHTML = sidebarContent;
 });
 
+<<<<<<< HEAD
 // footer.js
 document.addEventListener('DOMContentLoaded', function () {
     const footerDiv = document.getElementById('footer-container');
@@ -32,4 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     footerDiv.innerHTML = footerContent;
 });
+=======
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("show"); 
+}
+>>>>>>> c4ac6c7daeca6cb7a4bf5f7cedf7dde77bf41fd9
 
