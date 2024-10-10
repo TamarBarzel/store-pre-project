@@ -6,6 +6,8 @@ body {
 
 main {
     background-color: #EEEEEE;
+    width: 82%;
+    direction: ltr;
 }
 
 #a-Business-details{
@@ -37,13 +39,17 @@ footer {
 
 .payment-form-container{
     padding: 5%;
+    min-height: 100vh;
+    padding-top: 60px;
 }
 
 .business-details-container{
+    min-height: 100vh;
     background-color: #EEEEEE;
     padding: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    direction: rtl;
 }
 form {
     display: flex;
@@ -122,7 +128,7 @@ i{
     flex-direction: column;
     justify-content: flex-start;
     transition: transform 0.3s ease;
-    
+
 }
 
 #sidebar a {
@@ -179,13 +185,16 @@ i{
 }
 
 @media (max-width: 768px) {
+    main{
+        width: 100%;
+    }
     #sidebar {
         width: 30%;
         transform: translateX(100%);
     }
 
     #content {
-        margin-right: 0; 
+        margin-right: 0;
     }
 
     .hamburger {

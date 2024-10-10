@@ -5,23 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
-
-    <div class="payment-form-container">
-        <h2>עגלת קניות</h2>
-        <h6>תשלום בביט או בפייבוקס</h6>
-        <form>
-            <input type="text" placeholder="כתובת + דירה + קוד כניסה">
-            <input type="tel" placeholder="טלפון">
-            <input type="submit" value="לשליחת הזמנה">
-        </form>
-        <h5>סה"כ: ---</h5>
-        <h6>בשלב הבא אפשר להתכתב עם נציג ולשנות את ההזמנה</h6>
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
     </div>
-    
+
+
+    <div id="sidebar">
+        <a href="#stationary">כלי כתיבה</a>
+        <a href="#notebooks">מחברות</a>
+        <a href="#colors">צבעים ויצירה</a>
+        <div class="devider"></div>
+        <a href="payment.html" class="payment">לתשלום 🛒</a>
+    </div>
+
+    <div style="direction: ltr;">
+        <main>
+            <div class="payment-form-container">
+                <h2>עגלת קניות</h2>
+                <h6>תשלום בביט או בפייבוקס</h6>
+                <form>
+                    <input type="text" placeholder="כתובת + דירה + קוד כניסה">
+                    <input type="tel" placeholder="טלפון">
+                    <input type="submit" value="לשליחת הזמנה">
+                </form>
+                <h5>סה"כ: ---</h5>
+                <h6>בשלב הבא אפשר להתכתב עם נציג ולשנות את ההזמנה</h6>
+            </div>
+        </main>
+    </div>
+    <div id="footer-container"> </div>
     <script src='../JS/scripts.js'>  </script>
 </body>
 
