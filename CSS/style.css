@@ -4,17 +4,21 @@ body {
     direction: rtl
 }
 
-header {
-    background-color: aqua;
+main {
+    background-color: #EEEEEE;
 }
 
-main {
-    background-color: aquamarine;
+#a-Business-details{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+#a-Business-details:hover{
+    text-decoration: underline;
 }
 
 footer {
     position: fixed;
-    background-color: palevioletred;
+    background-color: #00ADB5;
     bottom: 0;
     width: 100%;
 }
@@ -26,12 +30,17 @@ footer {
     align-items: center;
 }
 
+.footer-Business-details{
+    background-color: #222831;
+    text-decoration: none;
+}
+
 .payment-form-container{
     padding: 5%;
 }
 
 .business-details-container{
-    background-color: #fff;
+    background-color: #EEEEEE;
     padding: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -45,12 +54,12 @@ input {
     text-align: right;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #EEEEEE;
     border-radius: 4px;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #00ADB5;
     color: white;
     border: none;
     cursor: pointer;
@@ -58,18 +67,18 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0a9198;
 }
 
 h2 {
     text-align: right;
     margin-bottom: 10px;
-    color: #333;
+    color: #393E46;
 }
 
 h3 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
+    color: #393E46;
+    border-bottom: 2px solid #00ADB5;
     padding-bottom: 10px;
 }
 h5 {
@@ -88,7 +97,7 @@ h6 {
 
 dt {
     font-weight: bold;
-    color: #3498db;
+    color: #00ADB5;
     margin-top: 15px;
 }
 
@@ -106,13 +115,12 @@ i{
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #222831;
     overflow-x: hidden;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
     
 }
 
@@ -138,7 +146,7 @@ i{
 
 #sidebar a.payment {
     background-color: gold;
-    color: black;
+    color: #222831;
     text-align: right;
     font-weight: bold;
     padding: 1.2rem;
@@ -151,10 +159,11 @@ i{
 #sidebar a.payment i {
     margin-left: 0.5rem;
 }
+
 .devider {
     border: 1px solid var(--border);
     margin: 1rem 0;
-    background-color: #575757;
+    background-color: #393E46;
 }
 
 @media (max-width: 768px) {
