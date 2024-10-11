@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-
+    <title>Store</title>
 </head>
 
 <body>
@@ -18,22 +17,23 @@
         </div>
 
         <div id="sidebar">
-            <a href="#stationary">כלי כתיבה</a>
-            <a href="#notebooks">מחברות</a>
-            <a href="#colors">צבעים ויצירה</a>
+            <a href="#" data-category="all">כל המוצרים</a> 
+            <a href="#" data-category="electronics">אלקטרוניקה</a>
+            <a href="#" data-category="jewelery">תכשיטים</a>
+            <a href="#" data-category="men's clothing">בגדי גברים</a>
+            <a href="#" data-category="women's clothing">בגדי נשים</a>
+
             <div class="devider"></div>
-            <a href="payment.html" class="payment">לתשלום 🛒</a>
+            <a href="../HTML/payment.html" class="payment">לתשלום 🛒</a>
         </div>
 
         <div style="direction: ltr;">
             <main>
                 <div id="products-container"></div>
             </main>
-
         </div>
 
-        <div id="footer-container"> </div>
-
+        <div id="footer-container"></div>
     </div>
 
     <script src='../JS/scripts.js'></script>
