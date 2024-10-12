@@ -41,20 +41,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 productImg.src = product.image;
                 productCard.appendChild(productImg);
 
+                let wrapCardInfo = document.createElement('div')
+
                 let productName = document.createElement('h3');
                 productName.textContent = product.title;
-                productCard.appendChild(productName);
+                wrapCardInfo.appendChild(productName);
 
                 let productPrice = document.createElement('p');
                 productPrice.textContent = `Price: $${product.price}`;
-                productCard.appendChild(productPrice);
+                wrapCardInfo.appendChild(productPrice);
 
                 let addToCartBtn = document.createElement('button');
                 addToCartBtn.textContent = 'Add to Cart';
                 addToCartBtn.classList.add('add-to-cart');
                 addToCartBtn.addEventListener('click', () => addToCart(product));
-                productCard.appendChild(addToCartBtn);
+                wrapCardInfo.appendChild(addToCartBtn);
 
+                productCard.appendChild(wrapCardInfo)
                 productsContainer.appendChild(productCard);
             });
         })
