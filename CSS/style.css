@@ -19,11 +19,12 @@ main {
     direction: ltr;
 }
 
-#a-Business-details{
+#a-Business-details {
     color: #EEEEEE;
     text-decoration: none;
 }
-#a-Business-details:hover{
+
+#a-Business-details:hover {
     text-decoration: underline;
 }
 
@@ -41,25 +42,26 @@ footer {
     align-items: center;
 }
 
-.footer-Business-details{
+.footer-Business-details {
     background-color: #222831;
     text-decoration: none;
 }
 
-.payment-form-container{
+.payment-form-container {
     padding: 5%;
     min-height: 100vh;
     padding-top: 60px;
 }
 
-.business-details-container{
+.business-details-container {
     min-height: 100vh;
     background-color: #EEEEEE;
     padding: 50px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     direction: rtl;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -96,6 +98,7 @@ h3 {
     border-bottom: 2px solid #00ADB5;
     padding-bottom: 10px;
 }
+
 h5 {
     text-align: right;
     margin-top: 20px;
@@ -120,7 +123,7 @@ dd {
     margin-bottom: 10px;
 }
 
-i{
+i {
     padding: 1%;
 }
 
@@ -180,6 +183,7 @@ i{
     margin: 1rem 0;
     background-color: #393E46;
 }
+
 .hamburger {
     display: none;
     font-size: 28px;
@@ -193,10 +197,18 @@ i{
     padding: 10px;
 }
 
+a[data-category].active {
+    color: yellow; 
+    font-weight: bold; 
+    background-color: #565c66; 
+}
+
+
 #products-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);    align-items: start;
+    gap: 20px;
     padding: 20px;
 }
 
@@ -227,9 +239,10 @@ i{
 
 
 @media (max-width: 768px) {
-    main{
+    main {
         width: 100%;
     }
+
     #sidebar {
         width: 30%;
         transform: translateX(100%);
@@ -246,8 +259,8 @@ i{
     #sidebar.show {
         transform: translateX(0);
     }
-    #sidebar a{
+
+    #sidebar a {
         margin-top: 22%;
     }
 }
-

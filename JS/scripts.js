@@ -1,37 +1,75 @@
-// sidebar.js
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
-    const productsContainer = this.getElementById('products-container')
+    const productsContainer = document.getElementById('products-container'); 
 
-    const sidebarContent = `
-        <a href="#stationary">כלי כתיבה</a>
-        <a href="#notebooks">מחברות</a>
-        <a href="#colors">צבעים ויצירה</a>
-        <div class="devider"></div>
-        <a href="../HTML/payment-form.html" class="payment"> לתשלום 🛒</a>
-    `;
+    if (sidebar) {
+        const sidebarContent = `
+            <a href="index.html?category=all" data-category="all">כל המוצרים</a>
+            <a href="index.html?category=electronics" data-category="electronics">אלקטרוניקה</a>
+            <a href="index.html?category=jewelery" data-category="jewelery">תכשיטים</a>
+            <a href="index.html?category=men's clothing" data-category="men's clothing">בגדי גברים</a>
+            <a href="index.html?category=women's clothing" data-category="women's clothing">בגדי נשים</a>
+            <div class="devider"></div>
+            <a href="../HTML/payment-form.html" class="payment">לתשלום 🛒</a>
+        `;
+        sidebar.innerHTML = sidebarContent;
 
-    sidebar.innerHTML = sidebarContent;
+        const links = sidebar.querySelectorAll('a[data-category]');
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category') || 'all';
 
+        links.forEach(link => {
+            if (link.getAttribute('data-category') === category) {
+                link.classList.add('active');
+            }
+
+            link.addEventListener('click', function (event) {
+                links.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        if (productsContainer) {
+            fetchProducts(category);
+        }
+    }
+
+    // בדיקה אם אלמנטים לעגלת הקניות קיימים לפני עדכון
+    if (document.getElementById('cart-items') && document.getElementById('total-amount')) {
+        updateCart();
+    }
+
+    // footer
     const footerDiv = document.getElementById('footer-container');
-    const footerContent = `
-       <footer>
-            <div class="footer-child">
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-            </div>
-            <div class="footer-child footer-Business-details" >
-                <a href="../HTML/Business-details.html" id='a-Business-details'>- תנאים וצור קשר -</a>
-            </div>
-        </footer>
-    `;
-    footerDiv.innerHTML = footerContent;
+    if (footerDiv) {
+        const footerContent = `
+            <footer>
+                <div class="footer-child">
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <div class="footer-child footer-Business-details">
+                    <a href="../HTML/Business-details.html" id='a-Business-details'>- תנאים וצור קשר -</a>
+                </div>
+            </footer>
+        `;
+        footerDiv.innerHTML = footerContent;
+    }
+});
 
+function fetchProducts(category) {
+    const productsContainer = document.getElementById('products-container');
+    if (!productsContainer) return; 
 
+    productsContainer.innerHTML = '';
 
-    fetch('https://fakestoreapi.com/products')
-        .then(Response => Response.json())
+    const apiUrl = category === 'all' 
+        ? 'https://fakestoreapi.com/products' 
+        : `https://fakestoreapi.com/products/category/${category}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
         .then(data => {
             data.forEach(product => {
                 let productCard = document.createElement('div');
@@ -60,14 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => {
             console.log(error);
-        })
-
-        updateCart();
-});
+        });
+}
 
 function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("show");
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
 }
 
 function addToCart(product) {
@@ -81,12 +117,12 @@ function addToCart(product) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    // alert(`${product.title} added to cart`);
 }
 
 function updateCart() {
     const cartItemsContainer = document.getElementById('cart-items');
     const totalAmountElement = document.getElementById('total-amount');
+    if (!cartItemsContainer || !totalAmountElement) return; 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let totalAmount = 0;
 
@@ -109,19 +145,3 @@ function updateCart() {
     });
     totalAmountElement.textContent = totalAmount.toFixed(2);
 }
-
-function changeQuantity(itemId, change) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const itemIndex = cart.findIndex(item => item.id === itemId);
-
-    if (itemIndex !== -1) {
-        cart[itemIndex].quantity += change;
-        if (cart[itemIndex].quantity <= 0) {
-            cart.splice(itemIndex, 1);
-        }
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCart();
-}
-
