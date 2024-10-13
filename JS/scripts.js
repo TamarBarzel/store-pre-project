@@ -148,3 +148,16 @@ function updateCart() {
     });
     totalAmountElement.textContent = totalAmount.toFixed(2);
 }
+
+function changeQuantity(itemId, change) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const itemIndex = cart.findIndex(item => item.id === itemId);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity += change;
+        if (cart[itemIndex].quantity <= 0) {
+            cart.splice(itemIndex, 1);
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
+}
