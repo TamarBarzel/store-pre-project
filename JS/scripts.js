@@ -9,13 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="index.html?category=men's clothing" data-category="men's clothing">בגדי גברים</a>
         <a href="index.html?category=women's clothing" data-category="women's clothing">בגדי נשים</a>
         <div class="devider"></div>
-        <a href="../HTML/payment.html" class="payment">לתשלום 🛒</a>
+        <a href="../HTML/payment-form.html" class="payment">לתשלום 🛒</a>
     `;
 
     sidebar.innerHTML = sidebarContent;
     const links = sidebar.querySelectorAll('a[data-category]');
 
-    // פונקציה לשליפת מוצרים
     function fetchProducts(category) {
         productsContainer.innerHTML = ''; 
 
@@ -50,24 +49,20 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // בודק את הקטגוריה מהשאלת URL ומבצע את ההדגשה
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category') || 'all';
 
     links.forEach(link => {
-        // בודק אם הקישור תואם לקטגוריה מהשאלה
         if (link.getAttribute('data-category') === category) {
-            link.classList.add('active'); // מוסיף את המחלקה active
+            link.classList.add('active'); 
         }
         
-        // מוסיף את אירוע הלחיצה
         link.addEventListener('click', function (event) {
             links.forEach(link => link.classList.remove('active'));
-            this.classList.add('active'); // מוסיף את המחלקה active
+            this.classList.add('active'); 
         });
     });
 
-    // טוען את המוצרים לפי הקטגוריה שנמצאה בשאילתא
     fetchProducts(category);
 
     // footer
@@ -90,5 +85,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('show'); // מוסיף או מסיר את המחלקה show
+    sidebar.classList.toggle('show'); 
 }
