@@ -209,9 +209,9 @@ a[data-category].active {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    /* align-items: start; */
     gap: 20px;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .product-card {
