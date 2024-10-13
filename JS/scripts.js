@@ -65,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchProducts(category);
 
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    
     // footer
     const footerDiv = document.getElementById('footer-container');
     const footerContent = `
@@ -79,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </footer>
     `;
-
+    
     footerDiv.innerHTML = footerContent;
-});
+})
 
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
